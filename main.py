@@ -33,7 +33,7 @@ class PycordManager(commands.Bot):
                     print(e)
 
         await Tortoise.init(
-            db_url="sqlite://data/database.db", modules={"models": ["utils"]}
+            db_url="sqlite://db/database.db", modules={"models": ["utils"]}
         )
         # await Tortoise.generate_schemas()
         print(self.user, "is ready")
