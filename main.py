@@ -11,7 +11,7 @@ class PycordManager(commands.Bot):
         super().__init__(
             command_prefix="p.",
             intents=discord.Intents(members=True, messages=True, guilds=True),
-            owner_ids={543397958197182464},
+            owner_ids={223504252788670467},
             help_command=commands.MinimalHelpCommand(),
             allowed_mentions=discord.AllowedMentions.none(),
             activity=discord.Activity(
@@ -33,9 +33,9 @@ class PycordManager(commands.Bot):
                     print(e)
 
         await Tortoise.init(
-            db_url="sqlite://db/database.db", modules={"models": ["utils"]}
+            db_url="sqlite://database.sqlite3", modules={"models": ["utils"]}
         )
-        # await Tortoise.generate_schemas()
+        await Tortoise.generate_schemas()
         print(self.user, "is ready")
 
 

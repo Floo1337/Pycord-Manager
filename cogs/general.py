@@ -15,7 +15,7 @@ class General(Cog):
 
     def __init__(self, bot) -> None:
         super().__init__(bot)
-        self.suggestions_channel = bot.get_channel(881735375947722753)
+        self.suggestions_channel = bot.get_channel(896002770962886678)
 
     @command()
     async def ping(self, ctx: Context):
@@ -79,6 +79,7 @@ class General(Cog):
         buf = io.StringIO(src)
         file = discord.File(buf, inspect.getsourcefile(callback))
         await ctx.send(file=file)
+
 
 def setup(bot):
     bot.add_cog(General(bot))

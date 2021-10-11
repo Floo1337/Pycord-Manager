@@ -9,7 +9,7 @@ class Moderation(Cog):
 
     def __init__(self, bot) -> None:
         super().__init__(bot)
-        self.mod_log_channel = bot.get_channel(881412086041804811)
+        self.mod_log_channel = bot.get_channel(897261659557617724)
 
     async def mod_log(self, mod, member, action):  # Missing Access
         await self.mod_log_channel.send(
